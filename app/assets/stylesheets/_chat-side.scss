@@ -8,7 +8,6 @@
     color: $white;
   }
 }
-
 .chat-side {
   width: 300px;
   color: $white;
@@ -43,7 +42,6 @@
       }
     }
   }
-  
   .groups {
     height: calc(100vh - 100px);
     background-color: #2f3e51;
@@ -57,22 +55,17 @@
       }
     }
   }
-
-
 .user-menu__new-group {
   margin-left: 0.3rem;
   list-style: none;
   color: red($color: #000000);
 }
-
 .chat-side a {
   color: $white;
 }
-
 * {
   box-sizing: border-box;
 }
-
 .group__latest-message {
   font-size: 11px;
 }
