@@ -1,0 +1,52 @@
+
+
+.flash-box
+  .notice グループを作成しました
+
+
+.wrapper
+  .chat-side
+    .side-header
+      %p.side-header__user-name だい
+      %ul.user-menu
+        %li.user-menu__edit-user
+          = link_to "new_group" do
+            %i.fa.fa-edit
+        %li.user-menu__new-group
+          = link_to "edit_users" do
+            %i.fa.fa-cog
+
+    .groups
+      .group
+        %p.group__group-name  グループ
+        %p.group__latest-message  まだメッセージがありません
+
+  .chat-main
+    .main-header
+      .current-group
+        %h2.current-group__name  グループ２
+
+        %ul.member-list
+          Member：
+          %li.member-list__member  だい
+            
+      = link_to "edit_groups" do
+        .main-header__edit-btn  Edit
+
+    .messages
+      .message
+        .upper-info
+          %p.upper-info__user  だい
+          %p.upper-info__date  2019/05/16(Thu) 20:35:03
+
+        %p.message__text  こんにちは
+
+    .form   
+      %form
+        %input.form__message{placeholder: 'type a message'}
+        .form__mask
+          %label.form__mask__image
+            =fa_icon 'picture-o', class: 'icon'
+            %input.hidden{type: 'file'}
+      %input.form__submit{type: 'submit', value: 'Send'}
+              
