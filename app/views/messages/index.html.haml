@@ -1,17 +1,16 @@
 
-.flash-box
-  .notice グループを作成しました
 
 .wrapper
   .chat-side
     .side-header
-      %p.side-header__user-name だい
+      %p.side-header__user-name 
+        = current_user.name
       %ul.user-menu
         %li.user-menu__edit-user
           = link_to "new_group" do
             %i.fa.fa-edit
         %li.user-menu__new-group
-          = link_to "edit_users" do
+          = link_to edit_user_path(current_user) do
             %i.fa.fa-cog
 
     .groups
