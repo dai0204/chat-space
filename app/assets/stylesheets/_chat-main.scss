@@ -1,0 +1,99 @@
+.chat-main {
+  width: calc(100vw - 300px);
+  float: left;
+  .main-header {
+    height: 100px;
+    border-bottom: 1px solid #eee;
+    padding: 0 40px;
+    display: flex;
+    background-color: $white;
+    justify-content: space-between;
+    .current-group {
+      font-size: 20px;
+      color: #333;
+      margin-top: 35px;    
+      ul {
+        display: flex;
+        margin-top: 15px;
+        font-size: 12px;
+        color: $gray;
+      }
+    }
+    &__edit-btn {
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px;
+      margin-top: 30px;
+      border: solid 1px $blue;
+      color: $blue;
+    }
+  }
+  .messages {
+    height: calc(100vh - 190px);
+    padding: 46px 40px;
+    background-color: $white;
+    overflow: scroll;
+    .message {
+      padding-bottom: 40px;
+      .upper-info {
+        display: flex;
+        margin-bottom: 10px;
+        &__user {
+          font-size: 16px;
+          font-weight: bold;
+          color: $thin_gray;
+        }
+        &__date {
+          font-size: 12px;
+          color: $gray;
+          margin-left: 10px;
+        }
+      }
+      &__text {
+        color: $thin_gray;
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .form {
+    height: 90px;
+    padding: 20px 40px;
+    background-color: #ddd;
+    &__message {
+      border: none;
+      float: left;
+      height: 50px;
+      width: calc(100% - 157px);
+      padding-left: 10px;
+    }
+    &__mask {
+      background-color: $white;
+      float: left;
+      height: 50px;
+      padding-right: 10px;
+      &__image {
+        font-size: 20px;
+        line-height: 50px;
+        cursor: pointer;
+      }
+      .hidden {
+        display: none;
+      }
+    }
+    &__submit {
+      background-color: $blue;
+      border: none;
+      color: $white;
+      float: right;
+      font-size: 16px;
+      height: 50px;
+      margin-left: 15px;
+      padding: 0 30px;
+      cursor: pointer;
+    }
+  }
+}
+a {
+  text-decoration: none;
+}
