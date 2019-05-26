@@ -25,6 +25,7 @@ $(function(){
                 </div>`
    return html;
   }
+
   $('#user-search-field').on('keyup', function(e){
     var input = $("#user-search-field").val();
     $.ajax({
@@ -33,6 +34,7 @@ $(function(){
       data: { name: input},
       dataType: 'json',
     })
+    
     .done(function(users){
       $('.user-search-result').empty();
       if (users.length !== 0 && input.length !== 0) {
@@ -47,6 +49,7 @@ $(function(){
       alert('ユーザの検索に失敗しました');
     })
   })
+
    $(document).on('click', '.user-search-add',function(){
       var id = $(this).attr('data-user-id')
       var user = $(this).attr('data-user-name')
