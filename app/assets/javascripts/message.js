@@ -23,7 +23,6 @@ $(function() {
       return html;
   }
 
-
   $('.new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -47,7 +46,6 @@ $(function() {
     });
     return false;
   });
-
 
   var reloadMessages = function() {
     var last_message_id = $('.message:last').data('id');
