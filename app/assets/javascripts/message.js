@@ -53,15 +53,13 @@ $(function() {
     var last_message_id = $('.message:last').data('id');
     var current_group_id = $('.left-header__title').data('group-id')
     var url = `/groups/${current_group_id}/api/messages`
-    $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
     $.ajax({
-      url: url,
+      url: 'api/messages',
       type: 'GET',
       dataType: 'json',
-      data: {id: last_message_id, group_id: current_group_id}
+      data: {id: last_message_id}
     })
     .done(function(messages) {
-      var insertHTML = '';
       messages.forEach(function(message){
         insertHTML = buildHTML(message)
         $('.messages').append(insertHTML);
