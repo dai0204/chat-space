@@ -5,22 +5,21 @@
   .chat
     .header
       .left-header
-        .left-header__title
+        .left-header__title{data: {group_id: @group.id}}
           = @group.name
         %ul.left-header__members
-          Member：
-          %li.member
-            - @group.users.each do |user| 
+          Member: 
+          - @group.users.each do |user|
+            %li.member 
               = user.name
       .right-header
-        = link_to edit_group_path(@group) do
-          .right-header__button
-            Edit
-    .messages
+        = link_to edit_group_path(@group), class: 'right-header__button'  do
+          Edit 
+    .messages 
       = render @messages
       
     .form
-      = form_for [@group, @message] , html: { class: 'new_message'} do |f|
+      = form_for [@group, @message] do |f|
         = f.text_field :content, class: 'form__message', placeholder: 'type a message'
         .form__mask
           = f.label :image, class: 'form__mask__image' do
