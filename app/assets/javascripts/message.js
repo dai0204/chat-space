@@ -65,7 +65,6 @@ $(function() {
       })
     })
     .fail(function() {
-      // alert.log('自動更新に失敗しました。');
     });
   };
   setInterval(reloadMessages, 5000);
